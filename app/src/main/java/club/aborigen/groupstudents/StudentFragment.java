@@ -74,8 +74,8 @@ public class StudentFragment extends Fragment {
             super.run();
 
             long groupId = getArguments().getLong(GROUP_ID);
-            students = DatabaseClient.getInstance(getContext()).getAppDatabase().studentDao().getAllFromGroup(groupId);
-//            students = DatabaseClient.getInstance(getContext()).getAppDatabase().studentDao().getAll();
+//            students = DatabaseClient.getInstance(getContext()).getAppDatabase().studentDao().getAllFromGroup(groupId);
+            students = DatabaseClient.getInstance(getContext()).getAppDatabase().studentDao().getAll();
             Log.i("UWC", "Students received: " + students.size());
 
             getActivity().runOnUiThread(() -> adapter.notifyDataSetChanged());

@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             super.run();
             //?? replace with unique fields and insert ignore
-            DatabaseClient.getInstance(getApplicationContext()).getAppDatabase().groupDao().deleteAll();
+            //DatabaseClient.getInstance(getApplicationContext()).getAppDatabase().groupDao().deleteAll();
             // ?? replace with foreign keys and cascading delete
-            DatabaseClient.getInstance(getApplicationContext()).getAppDatabase().studentDao().deleteAll();
+            //DatabaseClient.getInstance(getApplicationContext()).getAppDatabase().studentDao().deleteAll();
 
             GroupEntity group1 = new GroupEntity();
             group1.name = "Group A";
